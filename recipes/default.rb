@@ -7,7 +7,7 @@ end
 
 node[:nvm][:nodejs_versions].each do |version|
   bash "Installing Node.JS #{version}" do
-    code ". #{node[:nvm][:dir]}/nvm.sh && nvm install #{version}"
+    code ". #{node[:nvm][:dir]}/nvm.sh && nvm install #{version} && nvm alias defualt #{version}"
   end
 end
 
